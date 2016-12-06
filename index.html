@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Robotic wheelchair</title>
+        <link rel="stylesheet" type="text/css" href="static/bootstrapSuperhero.css">
+        <link rel="stylesheet" type="text/css" href="static/index.css">
+</head>
+    <body>
+        <div id="container" class="col">
+           <div class="control-buttons">
+                <button type="button" class="btn btn-success btn-circle btn-xl gear">Gear</button>
+                <button type="button" class="btn btn-danger btn-circle btn-xl break">Brake</button>
+            </div>
+            <div id="joystick" class="joystick">
+            </div>
+            <div class="data">
+                <span class="joystick" id="joystick-position"></span>
+                <span class="orientation-data" id="device-orientation"></span>
+            </div>
+ 
+            <script src="app/joystick.js"></script>
+            <script src="app/orientation.js"></script>
+	        <script>
+                createJoystick();
+                printOrientation();
+	        </script>
+        </div>
+    </body>
+</html>
+
