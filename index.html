@@ -8,9 +8,9 @@
 </head>
     <body>
         <div id="container" class="col">
-           <div class="control-buttons">
-                <button type="button" class="btn btn-success btn-circle btn-xl gear">Gear</button>
-                <button type="button" class="btn btn-danger btn-circle btn-xl break">Brake</button>
+            <div class="control-buttons">
+                <button id="gear" type="button" class="btn btn-success btn-circle btn-xl gear">Gear</button>
+                <button id="brake" type="button" class="btn btn-danger btn-circle btn-xl brake">Brake</button>
                 <div id="arm" class="btn-group btn-toggle arm">
                     <button class="btn btn-l toggle btn-default">HOLD</button>
                     <button class="btn btn-l toggle btn-success">RELEASE</button>
@@ -22,14 +22,38 @@
                 <span class="joystick" id="joystick-position"></span>
                 <span class="orientation-data" id="device-orientation"></span>
             </div>
+            <div class="progress">
+                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+                <span class="sr-only">0% Complete (success)</span>
+                </div>
+                <span class="progress-type">Gear level</span>
+            </div>
+            <div class="progress">
+                <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+                <span class="sr-only">0% Complete (success)</span>
+                </div>
+                <span class="progress-type">Brake level</span>
+            </div>
+
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
             <script src="app/joystick.js"></script>
             <script src="app/orientation.js"></script>
-            <script src="app/toggle_buttons.js"></script>
+            <script src="app/buttons.js"></script>
 	        <script>
                 createJoystick();
                 printOrientation();
                 arm.addEventListener("click", toggleHandling);
+                brake.addEventListener("mousedown", function() { button_on('div.progress-bar-danger') });
+                brake.addEventListener("mouseout", function () { button_off('div.progress-bar-danger') });
+                brake.addEventListener("mouseup", function () { button_off('div.progress-bar-danger') });
+                brake.addEventListener("touchstart", function () { button_on('div.progress-bar-danger') });
+                brake.addEventListener("touchend", function () { button_off('div.progress-bar-danger') });
+
+                gear.addEventListener("mousedown", function() { button_on('div.progress-bar-success') });
+                gear.addEventListener("mouseout", function () { button_off('div.progress-bar-success') });
+                gear.addEventListener("mouseup", function () { button_off('div.progress-bar-success') });
+                gear.addEventListener("touchstart", function () { button_on('div.progress-bar-success') });
+                gear.addEventListener("touchend", function () { button_off('div.progress-bar-success') });
 	        </script>
         </div>
     </body>
