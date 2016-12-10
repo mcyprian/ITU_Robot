@@ -11,6 +11,10 @@
            <div class="control-buttons">
                 <button type="button" class="btn btn-success btn-circle btn-xl gear">Gear</button>
                 <button type="button" class="btn btn-danger btn-circle btn-xl break">Brake</button>
+                <div id="arm" class="btn-group btn-toggle arm">
+                    <button class="btn btn-l toggle btn-default">HOLD</button>
+                    <button class="btn btn-l toggle btn-success">RELEASE</button>
+                </div>
             </div>
             <div id="joystick" class="joystick">
             </div>
@@ -18,12 +22,14 @@
                 <span class="joystick" id="joystick-position"></span>
                 <span class="orientation-data" id="device-orientation"></span>
             </div>
- 
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
             <script src="app/joystick.js"></script>
             <script src="app/orientation.js"></script>
+            <script src="app/toggle_buttons.js"></script>
 	        <script>
                 createJoystick();
                 printOrientation();
+                arm.addEventListener("click", toggleHandling);
 	        </script>
         </div>
     </body>

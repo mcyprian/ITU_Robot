@@ -19,6 +19,15 @@
     right: 45px;
     top: 50px;
 }
+.arm {
+    position: absolute;
+    right: 60px;
+    top: 200px;
+    border: 2px solid green;
+}
+.arm, .toggle {
+    border-radius: 45px;
+}
 .joystick {
     position: relative;
 }
