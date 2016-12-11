@@ -3,8 +3,8 @@
     <head>
         <meta charset="utf-8"/>
         <title>Robotic wheelchair</title>
-        <link rel="stylesheet" type="text/css" href="static/bootstrapSuperhero.css">
-        <link rel="stylesheet" type="text/css" href="static/index.css">
+        <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrapSuperhero.css">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
 </head>
     <body>
         <div id="container" class="col">
@@ -21,6 +21,26 @@
             <div class="data">
                 <span class="joystick" id="joystick-position"></span>
                 <span class="orientation-data" id="device-orientation"></span>
+            </div>
+            <div class="arrows">
+                <div class="arrows-left">
+                <span class="glyphicon glyphicon-chevron-left left-arr0" aria-hidden="true"></span>
+                <span class="glyphicon glyphicon-chevron-left left-arr1" aria-hidden="true"></span>
+                <span class="glyphicon glyphicon-chevron-left left-arr2" aria-hidden="true"></span>
+                <span class="glyphicon glyphicon-chevron-left left-arr3" aria-hidden="true"></span>
+                <span class="glyphicon glyphicon-chevron-left left-arr4" aria-hidden="true"></span>
+                <span class="glyphicon glyphicon-chevron-left left-arr5" aria-hidden="true"></span>
+                <span class="glyphicon glyphicon-chevron-left left-arr6" aria-hidden="true"></span>
+                </div>
+                <div class="arrows-right">
+                <span class="glyphicon glyphicon-chevron-right right-arr0" aria-hidden="true"></span>
+                <span class="glyphicon glyphicon-chevron-right right-arr1" aria-hidden="true"></span>
+                <span class="glyphicon glyphicon-chevron-right right-arr2" aria-hidden="true"></span>
+                <span class="glyphicon glyphicon-chevron-right right-arr3" aria-hidden="true"></span>
+                <span class="glyphicon glyphicon-chevron-right right-arr4" aria-hidden="true"></span>
+                <span class="glyphicon glyphicon-chevron-right right-arr5" aria-hidden="true"></span>
+                <span class="glyphicon glyphicon-chevron-right right-arr6" aria-hidden="true"></span>
+                </div>
             </div>
             <div class="progress">
                 <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
@@ -48,12 +68,14 @@
                 brake.addEventListener("mouseup", function () { button_off('div.progress-bar-danger') });
                 brake.addEventListener("touchstart", function () { button_on('div.progress-bar-danger') });
                 brake.addEventListener("touchend", function () { button_off('div.progress-bar-danger') });
+                brake.addEventListener("touchcancel", function () { button_off('div.progress-bar-danger') });
 
-                gear.addEventListener("mousedown", function() { button_on('div.progress-bar-success') });
+                gear.addEventListener("mousedown", function() { button_on_slow('div.progress-bar-success') });
                 gear.addEventListener("mouseout", function () { button_off('div.progress-bar-success') });
                 gear.addEventListener("mouseup", function () { button_off('div.progress-bar-success') });
-                gear.addEventListener("touchstart", function () { button_on('div.progress-bar-success') });
+                gear.addEventListener("touchstart", function () { button_on_slow('div.progress-bar-success') });
                 gear.addEventListener("touchend", function () { button_off('div.progress-bar-success') });
+                gear.addEventListener("touchcancel", function () { button_off('div.progress-bar-success') });
 	        </script>
         </div>
     </body>

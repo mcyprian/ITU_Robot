@@ -53,3 +53,21 @@
 	font-weight: 800;
 	padding: 3px 10px 2px;
 }
+.arrows {
+    width: 88%;
+    font-size: 45px;
+    position: absolute;
+    top: 400px;
+    left: 12%;
+    color: #4e5d6c
+}
+.arrows-left {
+    float: left;
+    width: 44%;
+    height: auto;
+}
+.arrows-right {
+    float: left;
+    width: 44%;
+    height: auto;
+}
