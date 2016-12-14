@@ -1,6 +1,6 @@
 #menu-btn {
 	position: absolute; 
-	right: 10px;
+	right: 50%;
 	padding: 0;
 	background:none;
 	font-size: 30px;
@@ -19,7 +19,6 @@
 	padding: 0;
 	margin-top: 5px;
 	border-radius: 10%;
-	border: thick solid #5BC0DE;
 }
 
 .menu-images {
@@ -27,12 +26,6 @@
 	height: 32px;
 }
 
-#playerDrop {
-	position: absolute;
-    display: none;
-	right: 10%;
-	width: 300px;
-}
 
 .btn-circle.btn-xl {
     width: 90px;
@@ -59,11 +52,11 @@
 }
 
 #music-time-bar #start {
-	left: -30%;
+	left: -20%;
 }
 
 #music-time-bar #end {
-	right: -30%;
+	right: -20%;
 }
 
 #music-time-bar #song {
@@ -75,11 +68,13 @@
 .player-btn {
 	position: relative;
 	margin: 5% auto 25% 17%;
+	left: 42%;
 }
 
 #playerDrop {
 	margin-top: 10px;
-	border: thin solid #5BC0DE;
+	right: 10%;
+	width: 300px;
 }
 
 #playerDrop button {
@@ -95,7 +90,6 @@
 
 .control-buttons {
     position: absolute;
-	top: 75%;
 	width: 100%;
 }
 
@@ -130,34 +124,23 @@
     border: 3px solid yellowgreen;
 }
 
-.progress {
-	position: absolute;
-	width: 100%;
-	height: 15px;
-	margin: 0;
+#progress-bar-parent {
+	position: fixed;
 	bottom: 0;
+	width: 100%;
 }
 
-.progress > .progress-type {
-	position: absolute;
-	left: 0px;
-	font-weight: 800;
-	padding: 3px 30px 2px 10px;
-	color: rgb(255, 255, 255);
-	background-color: rgba(25, 25, 25, 0.2);
-}
-.progress > .progress-completed {
-	position: absolute;
-	right: 0px;
-	font-weight: 800;
-	padding: 3px 10px 2px;
+.progress {
+	position: relative;
+	height: 25px;
+	margin-bottom: 0;
 }
 
 .arrows {
     width: 100%;
     font-size: 45px;
     position: absolute;
-    top: 70%;
+    top: 85%;
     color: #4e5d6c
 }
 .arrows-left {
@@ -171,23 +154,20 @@
 	right: 10%;
 }
 
-@media screen and (max-height: 640px) {
-	.progress {
-		height: 5px;
+@media screen and (max-height: 700px) {
+	.arrows {
+		top: 80%;
 	}
 }
 
 @media screen and (max-height: 600px) {
-	.control-buttons {
-		top: 70%;
+	.arrows {
+		top: 75%;
 	}
 }
 
-@media screen and (max-height: 500px) {
-	.control-buttons {
-		top: 60%;
-	}
-
+@media screen and (max-height: 400px) {
 	.arrows {
-		top: 55%;
+		top: 70%;
 	}
+}
