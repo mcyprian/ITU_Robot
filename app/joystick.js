@@ -17,16 +17,16 @@ function createJoystick() {
            console.log('up')
        })
 
-       setInterval(function() {
-           var outputEl = document.getElementById('joystick-position');
-           outputEl.innerHTML = '<b>Position:</b> '
-               + ' dx:' + joystick.deltaX().toFixed(2)
-               + ' dy:' + joystick.deltaY().toFixed(2)
-               + (joystick.right()  ? ' right'  : '')
-               + (joystick.up() ? ' up'     : '')
-               + (joystick.left()   ? ' left'   : '')
-               + (joystick.down()   ? ' down'   : '')
-       }, 1/30 * 1000);
+       //setInterval(function() {
+           //var outputEl = document.getElementById('joystick-position');
+           //outputEl.innerHTML = '<b>Position:</b> '
+               //+ ' dx:' + joystick.deltaX().toFixed(2)
+               //+ ' dy:' + joystick.deltaY().toFixed(2)
+               //+ (joystick.right()  ? ' right'  : '')
+               //+ (joystick.up() ? ' up'     : '')
+               //+ (joystick.left()   ? ' left'   : '')
+               //+ (joystick.down()   ? ' down'   : '')
+       //}, 1/30 * 1000);
 }
 
 var VirtualJoystick	= function(opts)

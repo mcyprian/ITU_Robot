@@ -7,58 +7,75 @@
         <link rel="stylesheet" type="text/css" href="css/index.css">
 </head>
     <body>
+		<button id="menu-btn" class="btn btn-info" onclick="toggleMenu()">
+			<span class="glyphicon glyphicon-align-justify" aria-hidden="true"></span>
+		</button>
+		<div id="menu" class="dropdown">
+			<button id="music-player-btn" class="btn btn-info dropbtn button-menu" onclick="musicDropDown()"><img class="menu-images" src='https://images.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.clipartbest.com%2Fcliparts%2Fdi6%2Fokx%2Fdi6okxri9.png&f=1'></img></button>
+			<button class="btn btn-info button-menu"><img class="menu-images" src='https://images.duckduckgo.com/iu/?u=http%3A%2F%2Ficons.iconarchive.com%2Ficons%2Fdanleech%2Fsimple%2F512%2Fskype-icon.png&f=1'></img></button>
+			<div id="playerDrop" class="dropdown-content">
+				<div class="player-btn">
+					<button class="btn">
+						<span class="glyphicon glyphicon-step-backward" aria-hidden="true"></span>
+					</button>
+					<button id="play-button" onclick="togglePlay()" class="btn">
+						<span class="glyphicon glyphicon-play" aria-hidden="true"></span>
+					</button>
+					<button class="btn">
+						<span class="glyphicon glyphicon-step-forward" aria-hidden="true"></span>
+					</button>
+				</div>
+				<div id="music-time-bar" class="progress-bar progress-bar-info" role="progressbar">
+					<p id="song">Song</p>
+					<p id="start"><b>mm:ss</b></p>
+					<p id="end"><b>mm:ss</b></p>
+				</div>
+			</div>
+		</div>
         <div id="container" class="col">
             <div class="control-buttons">
-                <button id="gear" type="button" class="btn btn-success btn-circle btn-xl gear">Gear</button>
-                <button id="brake" type="button" class="btn btn-danger btn-circle btn-xl brake">Brake</button>
-                <div id="arm" class="btn-group btn-toggle arm">
+                <div id="arm" class="btn-group btn-toggle">
                     <button class="btn btn-l toggle btn-default">HOLD</button>
                     <button class="btn btn-l toggle btn-success">RELEASE</button>
                 </div>
+                <button id="gear" type="button" class="btn btn-success btn-circle btn-xl gear">Gear</button>
+                <button id="brake" type="button" class="btn btn-danger btn-circle btn-xl brake">Brake</button>
             </div>
-            <div id="joystick" class="joystick">
-            </div>
-            <div class="data">
-                <span class="joystick" id="joystick-position"></span>
-                <span class="orientation-data" id="device-orientation"></span>
-            </div>
+            <div id="joystick" class="joystick"></div>
             <div class="arrows">
                 <div class="arrows-left">
-                <span class="glyphicon glyphicon-chevron-left left-arr0" aria-hidden="true"></span>
-                <span class="glyphicon glyphicon-chevron-left left-arr1" aria-hidden="true"></span>
-                <span class="glyphicon glyphicon-chevron-left left-arr2" aria-hidden="true"></span>
-                <span class="glyphicon glyphicon-chevron-left left-arr3" aria-hidden="true"></span>
-                <span class="glyphicon glyphicon-chevron-left left-arr4" aria-hidden="true"></span>
-                <span class="glyphicon glyphicon-chevron-left left-arr5" aria-hidden="true"></span>
-                <span class="glyphicon glyphicon-chevron-left left-arr6" aria-hidden="true"></span>
+					<span class="glyphicon glyphicon-chevron-left left-arr0" aria-hidden="true"></span>
+					<span class="glyphicon glyphicon-chevron-left left-arr1" aria-hidden="true"></span>
+					<span class="glyphicon glyphicon-chevron-left left-arr2" aria-hidden="true"></span>
+					<span class="glyphicon glyphicon-chevron-left left-arr3" aria-hidden="true"></span>
+					<span class="glyphicon glyphicon-chevron-left left-arr4" aria-hidden="true"></span>
+					<span class="glyphicon glyphicon-chevron-left left-arr5" aria-hidden="true"></span>
+					<span class="glyphicon glyphicon-chevron-left left-arr6" aria-hidden="true"></span>
                 </div>
                 <div class="arrows-right">
-                <span class="glyphicon glyphicon-chevron-right right-arr0" aria-hidden="true"></span>
-                <span class="glyphicon glyphicon-chevron-right right-arr1" aria-hidden="true"></span>
-                <span class="glyphicon glyphicon-chevron-right right-arr2" aria-hidden="true"></span>
-                <span class="glyphicon glyphicon-chevron-right right-arr3" aria-hidden="true"></span>
-                <span class="glyphicon glyphicon-chevron-right right-arr4" aria-hidden="true"></span>
-                <span class="glyphicon glyphicon-chevron-right right-arr5" aria-hidden="true"></span>
-                <span class="glyphicon glyphicon-chevron-right right-arr6" aria-hidden="true"></span>
+					<span class="glyphicon glyphicon-chevron-right right-arr0" aria-hidden="true"></span>
+					<span class="glyphicon glyphicon-chevron-right right-arr1" aria-hidden="true"></span>
+					<span class="glyphicon glyphicon-chevron-right right-arr2" aria-hidden="true"></span>
+					<span class="glyphicon glyphicon-chevron-right right-arr3" aria-hidden="true"></span>
+					<span class="glyphicon glyphicon-chevron-right right-arr4" aria-hidden="true"></span>
+					<span class="glyphicon glyphicon-chevron-right right-arr5" aria-hidden="true"></span>
+					<span class="glyphicon glyphicon-chevron-right right-arr6" aria-hidden="true"></span>
                 </div>
             </div>
             <div class="progress">
-                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
-                <span class="sr-only">0% Complete (success)</span>
+                <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+					<span class="sr-only">0% Complete (success)</span>
                 </div>
-                <span class="progress-type">Gear level</span>
-            </div>
-            <div class="progress">
-                <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
-                <span class="sr-only">0% Complete (success)</span>
+                <div class="progress-bar progress-bar-danger progress-bar-striped" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+					<span class="sr-only">0% Complete (success)</span>
                 </div>
-                <span class="progress-type">Brake level</span>
             </div>
 
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
             <script src="app/joystick.js"></script>
             <script src="app/orientation.js"></script>
             <script src="app/buttons.js"></script>
+            <script src="app/menu.js"></script>
 	        <script>
                 createJoystick();
                 printOrientation();
