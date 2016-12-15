@@ -1,9 +1,9 @@
 #menu-btn {
 	position: absolute; 
-	right: 50%;
+	right: 48%;
 	padding: 0;
 	background:none;
-	font-size: 30px;
+	font-size: 50px;
 }
 
 #menu {
@@ -98,6 +98,17 @@
 	width: 110px;
 	height: 110px;
 	font-size: xx-large;
+}
+
+.modal-header ul a {
+	font-size: large;
+}
+
+.modal-body {
+	position: relative;
+	overflow-y: auto;
+	max-height: 500px;
+	padding: 15px;
 }
 
 #brake {

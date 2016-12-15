@@ -1,7 +1,7 @@
 $(function () {
 	var btn_width = $("#menu-btn").outerWidth() + 20;
 	$("#menu").css("right", btn_width);
-})
+});
 
 function togglePlay() {
 	if ($("#play-button").children().hasClass("glyphicon-play")) {
