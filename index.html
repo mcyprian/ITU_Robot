@@ -16,25 +16,37 @@
 				<div class="modal-content">
 					<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal">&times;</button>
-						<h4 class="modal-title">Menu</h4>
+						<ul class="nav nav-tabs">
+							<li class="active"><a data-toggle="tab" href="#home">Home</a></li>
+							<li><a data-toggle="tab" href="#music">Music</a></li>
+							<li><a data-toggle="tab" href="#menu2">Skype</a></li>
+						</ul>
 					</div>
 					<div class="modal-body">
-						<div id="playerDrop" class="dropdown-content">
-							<div class="player-btn">
-								<button class="btn">
-									<span class="glyphicon glyphicon-step-backward" aria-hidden="true"></span>
-								</button>
-								<button id="play-button" onclick="togglePlay()" class="btn">
-									<span class="glyphicon glyphicon-play" aria-hidden="true"></span>
-								</button>
-								<button class="btn">
-									<span class="glyphicon glyphicon-step-forward" aria-hidden="true"></span>
-								</button>
+						<div class="tab-content">
+							<div id="home" class="tab-pane fade in active">
+								<h3>HOME</h3>
 							</div>
-							<div id="music-time-bar" class="progress-bar progress-bar-info" role="progressbar">
-								<p id="song">Song</p>
-								<p id="start"><b>mm:ss</b></p>
-								<p id="end"><b>mm:ss</b></p>
+							<div id="music" class="tab-pane fade dropdown-content">
+								<div class="player-btn">
+									<button class="btn">
+										<span class="glyphicon glyphicon-step-backward" aria-hidden="true"></span>
+									</button>
+									<button id="play-button" onclick="togglePlay()" class="btn">
+										<span class="glyphicon glyphicon-play" aria-hidden="true"></span>
+									</button>
+									<button class="btn">
+										<span class="glyphicon glyphicon-step-forward" aria-hidden="true"></span>
+									</button>
+								</div>
+								<div id="music-time-bar" class="progress-bar progress-bar-info" role="progressbar">
+									<p id="song">Song</p>
+									<p id="start"><b>mm:ss</b></p>
+									<p id="end"><b>mm:ss</b></p>
+								</div>
+							</div>
+							<div>
+							
 							</div>
 						</div>
 					</div>

@@ -3,14 +3,6 @@ $(function () {
 	$("#menu").css("right", btn_width);
 })
 
-function toggleMenu() {
-	$("#menu").slideToggle();
-}
-
-function musicDropDown() {
-	$("#playerDrop").slideToggle("fast");
-}
-
 function togglePlay() {
 	if ($("#play-button").children().hasClass("glyphicon-play")) {
 		$("#play-button").children().removeClass("glyphicon-play");
