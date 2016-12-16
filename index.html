@@ -17,17 +17,13 @@
 					<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal">&times;</button>
 						<ul class="nav nav-tabs">
-							<li class="active non-expand-link"><a data-toggle="tab" href="#home">Home</a></li>
-							<li><a class="non-expand-link" data-toggle="tab" href="#music">Music</a></li>
-							<li><a id="skype-link" data-toggle="tab" href="#skype">Skype</a></li>
+							<li><a class="active non-expand-link" data-toggle="tab" href="#music">Music</a></li>
+							<li><a id="skype-link" data-toggle="tab" href="#skype-div">Skype</a></li>
 						</ul>
 					</div>
 					<div class="modal-body">
 						<div class="tab-content">
-							<div id="home" class="tab-pane fade in active">
-								<h3>HOME</h3>
-							</div>
-							<div id="music" class="tab-pane fade dropdown-content">
+							<div id="music" class="tab-pane fade dropdown-content in active">
 								<div class="player-btn">
 									<button class="btn">
 										<span class="glyphicon glyphicon-step-backward" aria-hidden="true"></span>
@@ -45,8 +41,8 @@
 									<p id="end"><b>mm:ss</b></p>
 								</div>
 							</div>
-							<div id="skype" class="tab-pane fade">
-								<h2>Skype</h2>
+							<div id="skype-div" class="tab-pane fade">
+								<img id="skype" src="skype.png" alt="skype">
 							</div>
 						</div>
 					</div>

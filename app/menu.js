@@ -3,6 +3,15 @@ $(function () {
 	$("#menu").css("right", btn_width);
 });
 
+$(function (){
+	$(".non-expand-link").click(function (){
+		$(".modal-dialog").css("width", "600px");
+	});
+	$("#skype-link").click(function () {
+		$(".modal-dialog").css("width", "80%");
+	});
+})
+
 function togglePlay() {
 	if ($("#play-button").children().hasClass("glyphicon-play")) {
 		$("#play-button").children().removeClass("glyphicon-play");
