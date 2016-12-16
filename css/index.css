@@ -31,9 +31,10 @@
     width: 90px;
     height: 90px;
     padding: 10px 16px;
-    font-size: 24px;
+    font-size: 20px;
     line-height: 2.33;
-    border-radius: 45px;
+    border-radius: 55px;
+    text-align: center;
 }
 
 #music-time-bar {
@@ -126,8 +127,8 @@
 #arm {
     position: absolute;
     border: 2px solid green;
-	right: 20%; 
-	top: 75px;
+	right: 15%; 
+	top: 160px;
 }
 
 #arm, .toggle {
@@ -158,7 +159,7 @@
     width: 100%;
     font-size: 45px;
     position: absolute;
-    top: 85%;
+    top: 65%;
     color: #4e5d6c
 }
 .arrows-left {
