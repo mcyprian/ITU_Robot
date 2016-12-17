@@ -206,7 +206,7 @@
     width: 100%;
     font-size: 45px;
     position: absolute;
-    top: 65%;
+    top: 85%;
     color: #4e5d6c
 }
 .arrows-left {
@@ -236,4 +236,24 @@
 	.arrows {
 		top: 70%;
 	}
+}
+
+.top_ellipse {
+    position: absolute;
+    bottom: 80%;
+    left: 22%;
+    height: 400px;
+    width: 56%;
+    border-radius: 42%;
+    border: medium solid white;
+}
+
+.bottom_ellipse {
+    position: fixed;
+    top: 70%;
+    height: 400px;
+    left: -1%;
+    width: 102%;
+    border-radius: 30%;
+    border: medium solid white;
 }
