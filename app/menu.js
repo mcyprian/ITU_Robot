@@ -10,7 +10,13 @@ $(function (){
 	$("#skype-link").click(function () {
 		$(".modal-dialog").css("width", "80%");
 	});
-})
+});
+
+$(function (){
+	$("#sos").click(function (){
+		$(".sos-buttons").toggle();
+	});
+});
 
 function togglePlay() {
 	if ($("#play-button").children().hasClass("glyphicon-play")) {
